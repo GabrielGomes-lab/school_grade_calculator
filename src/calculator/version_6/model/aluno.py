@@ -11,17 +11,16 @@ class Aluno:
 
     def determinar_status(self):
         if self.media >= 7:
-            return "Approved"
+            return "Aprovado"
         elif self.media >= 5:
-            return "Recovery"
+            return "Recuperação"
         else:
-            return "Failed"
-
+            return "Reprovado"
     def to_dict(self):
         return {
-            "Student ID": self.registro,
-            "Grade 1": self.nota1,
-            "Grade 2": self.nota2,
-            "Average": round(self.media, 2),
+            "ID Estudante": self.registro,
+            "Nota 1": self.nota1,
+            "Nota 2": self.nota2,
+            "Média": round(self.media, 2),
             "Status": self.status
         }
